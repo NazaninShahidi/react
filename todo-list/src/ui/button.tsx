@@ -1,15 +1,18 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-
 interface Props {
-  name: string;
-  type?: "delete" | "edit" | "view";
+  name?: string;
+  type?: "delete" | "edit";
   handleFunc?: () => void;
 }
 function Button({ name, type, handleFunc }: Props) {
   return (
     <button
-      className="bg-[#00684A] text-white w-[234px] h-[30px] rounded-full font- text-base text-center "
+      className={`bg-[#00684A] text-white ${
+        name ? "w-[150px]" : "w-auto p-2 text-center mx-2"
+      }  ${
+        name ? "h-[35px]" : "h-auto"
+      }  rounded-full font- text-base text-center `}
       onClick={handleFunc}
+      type="button"
     >
       <span className="flex justify-center items-center">
         {type === "delete" && (
@@ -30,24 +33,6 @@ function Button({ name, type, handleFunc }: Props) {
           </svg>
         )}
 
-        {type === "view" && (
-          <svg
-            className="h-[18px] w-[18px] text-white"
-            viewBox="0 0 24 24"
-            stroke-width="2"
-            stroke="currentColor"
-            fill="none"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            {" "}
-            <path stroke="none" d="M0 0h24v24H0z" />{" "}
-            <circle cx="12" cy="12" r="2" />{" "}
-            <path d="M2 12l1.5 2a11 11 0 0 0 17 0l1.5 -2" />{" "}
-            <path d="M2 12l1.5 -2a11 11 0 0 1 17 0l1.5 2" />
-          </svg>
-        )}
-
         {type === "edit" && (
           <svg
             className="h-[18px] w-[18px] text-white"
@@ -64,8 +49,7 @@ function Button({ name, type, handleFunc }: Props) {
             <line x1="13.5" y1="6.5" x2="17.5" y2="10.5" />
           </svg>
         )}
-
-        <span className="mx-1">{name}</span>
+        {name && <span className="mx-1">{name}</span>}
       </span>
     </button>
   );
