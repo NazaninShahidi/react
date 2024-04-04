@@ -10,6 +10,7 @@ function AddItem() {
     const currentValue = inputRef.current.value;
     if (currentValue) {
       addItem(currentValue);
+      inputRef.current.value = "";
     }
   }
 
