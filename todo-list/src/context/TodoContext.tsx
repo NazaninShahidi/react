@@ -5,14 +5,14 @@ interface IContext {
   addItem?: (text: string) => void;
   deleteItem: (index) => void;
   deleteAllItem: () => void;
-  // editItem: () => void;
+  editItem: (text: string, index) => void;
 }
 export const TodoContext = createContext<IContext>({
   items: [],
   addItem: () => {},
   deleteItem: () => {},
   deleteAllItem: () => {},
-  // editItem: () => {},
+  editItem: () => {},
 });
 
 export function TodoContextProvider(props) {
@@ -24,8 +24,21 @@ export function TodoContextProvider(props) {
     setItemList(newArr);
   }
 
-  function deleteItemHandler(index) {
-    console.log(index);
+  function deleteItemHandler(indexItem) {
+    const newArr = [...itemList];
+    const findIndex = newArr.findIndex((i, index) => index === indexItem);
+    if (findIndex !== -1) {
+      newArr.splice(findIndex, 1);
+      setItemList(newArr);
+    }
+  }
+
+  function editItemHandler(text, indexItem) {
+    const newArr = [...itemList];
+    const findIndex = newArr.findIndex((i, index) => index === indexItem);
+    newArr[findIndex] = text;
+
+    setItemList(newArr);
   }
 
   function deleteAllItemHandler() {
@@ -37,6 +50,7 @@ export function TodoContextProvider(props) {
     addItem: addItemHandler,
     deleteItem: deleteItemHandler,
     deleteAllItem: deleteAllItemHandler,
+    editItem: editItemHandler,
   };
 
   return (

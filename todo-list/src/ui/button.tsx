@@ -1,7 +1,7 @@
 interface Props {
   name?: string;
   type?: "delete" | "edit";
-  handleFunc?: () => void;
+  handleFunc?: (e?) => void;
 }
 function Button({ name, type, handleFunc }: Props) {
   return (
