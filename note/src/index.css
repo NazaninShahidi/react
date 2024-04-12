@@ -1,0 +1,60 @@
+*,
+*::before,
+*::after {
+ box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body{
+  background: linear-gradient(
+    to bottom,
+    rgba(255, 255, 255, 0),
+    rgba(0, 0, 0, 0.4)
+  ),
+  url('../public/img/bg.avif');
+background-attachment: fixed;
+background-position: center;
+background-size: cover;
+backdrop-filter: blur(1.5px);
+height: 100vh;
+}
+
+.top-heading{
+  background-color: #2e2e2ef6;
+  text-align: center;
+  font-family: 'Montserrat';
+  font-size: 50px;
+  font-weight: 100;
+  margin: 0;
+  padding: 20px;
+  color: white;
+  border-bottom: #0096c7;
+
+}
+
+
+
+.d-flex{
+  display: flex;
+}
+
+.justify-between{
+  justify-content:space-between;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+.align-center{
+  align-items: center;
+}
+
+.flex-wrap{
+  flex-wrap: wrap;
+}
+
+.m-2{
+  margin: 2em;
+}

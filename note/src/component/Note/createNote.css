@@ -1,0 +1,98 @@
+
+.newBtn {
+  position: relative;
+  top: 10px;
+    width: 200px;
+    height: 200px;
+  }
+  
+  .new-button button {
+    border: 1px solid transparent;
+    border-radius: 50%;
+    position: relative;
+    padding: 20px;
+    width: 200px;
+    height: 200px;
+    z-index: 1;
+    margin-right: 100px;
+    margin-left: 100px;
+    box-shadow: 0px 2px 1px rgb(151, 149, 149);
+    font-size: 150px;
+    text-align: center;
+  }
+
+  .new-button button:active {
+    box-shadow: inset 0px 2px 15px rgb(151, 149, 149);
+  
+    transition: ease-in 200ms;
+  }
+
+.form{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.headingInput {
+    margin-bottom: 1em;
+    width: 700px;
+    height: 40px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    padding-left: 20px;
+    font-size: 18px;
+    color: black;
+    font-family: 'Montserrat';
+  }
+  .headingInput:focus {
+    outline: none;
+  }
+
+  .textInput {
+   
+    width: 700px;
+    padding-bottom: 250px;
+    border: 1px solid transparent;
+    border-radius: 10px;
+    padding-left: 20px;
+    font-size: 18px;
+    padding-top: 10px;
+    color: black;
+    font-family: 'Montserrat';
+  }
+  
+  .textInput:focus {
+    outline: none;
+  }
+
+
+  .addNoteBtn button {
+    background-color: rgb(83, 132, 222);
+    color: #ffffff;
+    border: 1px solid transparent;
+    padding: 14px 16px 14px 16px;
+    border-radius: 14px;
+    font-size: 18px;
+    margin: 0.25em;
+ 
+  }
+  .addNoteBtn button:hover {
+    background-color: rgb(81, 116, 181);
+    transition: ease-in 200ms;
+  }
+  .closeBtn button {
+    background-color: rgb(100, 100, 100);
+    color: white;
+    border: 1px solid transparent;
+    padding: 14px 16px 14px 16px;
+    border-radius: 14px;
+    font-size: 18px;
+    margin: 0.25em;
+  
+  }
+  
+  .closeBtn button:hover {
+    background-color: rgb(88, 88, 88);
+    transition: ease-in 200ms;
+  }
