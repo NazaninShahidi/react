@@ -14,5 +14,13 @@ body{
   max-width: 1400px;
 }
 
+a{
+  text-decoration: none;
+}
+
+li{
+  list-style: none;
+}
+
 
 
