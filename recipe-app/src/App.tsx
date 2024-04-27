@@ -1,8 +1,9 @@
 import React from "react";
-import Menu from "./components/ui/layout/Menu";
+import Menu from "./components/layout/Menu";
 import HeroSection from "./components/HeroSection";
 import ExploreSection from "./components/ExploreSection";
-import Footer from "./components/ui/layout/Footer";
+import Footer from "./components/layout/Footer";
+import Featured from "./components/Featured";
 
 function App() {
   return (
@@ -10,6 +11,7 @@ function App() {
       <Menu />
       <HeroSection />
       <ExploreSection />
+      <Featured />
       <Footer />
     </div>
   );
