@@ -50,7 +50,7 @@ const CustomSlider = ({ children }: CustomSliderProps) => {
 
   return (
     <div className="silder">
-      <div className="header-wrapper">
+      <div className="header-wrapper-slider">
         <h4>featured recipes</h4>
         <div className="navigation-buttons">
           <button className="prev-btn" onClick={prevSlide}>

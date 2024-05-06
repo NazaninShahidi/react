@@ -1,8 +1,10 @@
 .card {
 display: flex;
+position: relative;
 flex-direction: column;
 align-items: flex-start;
 padding: 0px;
+
 max-width: 632px;
 flex: none;
 order: 0;
@@ -39,7 +41,7 @@ flex-direction: column;
 align-items: flex-start;
 padding: 0px;
 gap: 12px;
-width: 584px;
+/* width: 584px; */
 height: 85px;
 flex: none;
 order: 0;
@@ -68,7 +70,7 @@ color: #262522;
  .card-text-wrapper p {
     /* Paragraph 2 */
 
-width: 584px;
+/* width: 584px; */
 height: 44px;
 
 /* Paragraph 2 */
@@ -98,7 +100,8 @@ flex-direction: row;
 justify-content: space-between;
 align-items: center;
 padding: 0px;
-gap: 200px;
+text-wrap: nowrap;
+/* gap: 200px; */
 flex: none;
 order: 1;
 align-self: stretch;
@@ -145,6 +148,14 @@ font-size: 14px;
 line-height: 100%;
 text-transform: uppercase;
 color: #262522;
+
+
+}
+
+.vegan-tag{
+    position: absolute;
+    right: 4%;
+    top: 45%;
 
 
 }

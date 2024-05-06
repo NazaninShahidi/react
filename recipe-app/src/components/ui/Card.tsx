@@ -1,19 +1,31 @@
 import "./card.css";
 
-function Card() {
+interface Item {
+  id: string;
+  title: string;
+  image: string;
+  description: string;
+  time: string;
+  type: string;
+}
+
+function Card<T extends Item>({ item }: { item: T }) {
   return (
     <div className="card">
-      <img src="images/recipe/chicken.png" alt="" className="card-img" />
+      <img src={item.image} alt="" className="card-img" />
+      {item.type === "vegan" && (
+        <div className="vegan-tag">
+          <img src="images/vagan-tag.png" alt="" />
+        </div>
+      )}
+
       <div className="card-content">
         <div className="card-text-wrapper">
-          <h6 className="card-title">Savory Herb-Infused Chicken</h6>
-          <p>
-            Indulge in the rich and savory symphony of flavors with our Savory
-            Herb-Infused Chicken
-          </p>
+          <h6 className="card-title">{item.title}</h6>
+          <p>{item.description}</p>
         </div>
         <div className="card-footer">
-          <span>40 Min - easy prep - 3 serves</span>
+          <span>{item.time}</span>
           <button>view recipe</button>
         </div>
       </div>
